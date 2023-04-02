@@ -60,6 +60,7 @@
   </style>
   </head>
   <body>
+  <a href="https://www.keshikan.net/fonts.html">Font "DSEG" by けしかん</a>
   <div class="main">
     <div class="dateBack">
       <span class="dateNum">8888</span>/<span class="dateNum">88</span>/<span class="dateNum">88</span>(~~~)
@@ -88,7 +89,7 @@
     {
       var nowTime = new Date();
       var nowYear = nowTime.getFullYear();
-      var nowMonth = plus0(nowTime.getMonth());
+      var nowMonth = plus0(nowTime.getMonth() + 1);
       var nowDate = plus0(nowTime.getDate());
       var nowDay = nowTime.toString().split(" ")[0];
       var nowTimeHour = plus0(nowTime.getHours());
@@ -98,6 +99,9 @@
       var nowTimeString = nowTimeHour + ":" + nowTimeMin + ":" + nowTimeSec;
       document.getElementById("date").innerHTML = nowDateString;
       document.getElementById("time").innerHTML = nowTimeString;
+      console.log(nowTime.getMonth());
+      console.log(nowMonth);
+    
     }
     setInterval("showClock()",1000);
     showClock();
