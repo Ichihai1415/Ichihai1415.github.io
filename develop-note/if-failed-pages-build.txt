@@ -1,0 +1,20 @@
+pages build and deploymentでエラーが発生したとき
+
+  Error: fatal: No url found for submodule path 'Ichihai1415.github.io' in .gitmodules
+  Error: The process '/usr/bin/git' failed with exit code 128
+
+みたいに
+↓
+(https://qiita.com/mktshhr/items/578cc5b5aea5b3ed9303)も参考に
+コマンドはGit Bash
+1. GitHubにあるレポジトリの名前変える
+バックアップしないなら削除でもok
+2. 元の名前でレポジトリを新規作成
+
+3. $ cd "[ローカルレポジトリのパス]" でパス設定
+↓用
+4. ローカルの.gitディレクトリを削除(コマンドなら$ rm -rf .git)
+やらなくてもいいかも
+5. $ git initでgit初期化
+
+6. 以降通常通りvscodeからコミット・プッシュ
