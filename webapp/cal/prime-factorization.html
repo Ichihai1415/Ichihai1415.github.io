@@ -1,0 +1,90 @@
+<!--c#
+        private void PrimeFactorizationExecution_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime StartTime = DateTime.Now;
+                PrimeFactorizationLabel.Text = "素因数分解する数:";
+                PrimeFactorizationResultTextBox.Text = "";
+                PrimeFactorizationLabel.Text = "素因数分解する数:　　　　　　　　　　　　　　　　　計算中...";
+                long OriginNum = Convert.ToInt64(PrimeFactorizationNumeric.Text);
+                long DoingNum = OriginNum;
+                string Result = "";
+                long DivisionNum = 2;
+                long DivisingNum = 1;
+                //List<int> Results = new List<int>();
+                Dictionary<long, long> Results = new Dictionary<long, long>();
+                for (long i = 0; DoingNum > 1; i++)
+                {
+                    if (DoingNum % DivisionNum == 0)
+                    {
+                        if (Results.ContainsKey(DivisionNum))
+                        {
+                            DivisingNum += 1;
+                            Results[DivisionNum] = DivisingNum;
+                            Result = Result.Replace($"・{DivisionNum}^{Results[DivisionNum] - 1}", $"・{DivisionNum}^{Results[DivisionNum]}");
+                        }
+                        else
+                        {
+                            DivisingNum = 1;
+                            Results.Add(DivisionNum, DivisingNum);
+                            Result += $"・{DivisionNum}^{Results[DivisionNum]}・";
+                        }
+                        DoingNum /= DivisionNum;
+                    }
+                    else
+                    {
+                        DivisionNum += 1;
+                    }
+                }
+                Result = Result.Remove(0, 1);
+                Result = Result.Replace("^1・", "・");
+                Result = Result.Replace("・・", "・");
+
+                Result = Result.Remove(Result.Length - 1, 1);
+
+                PrimeFactorizationResultTextBox.Text = Result;
+                PrimeFactorizationLabel.Text = $"素因数分解する数:　　　　　　　　　　　　　　　　　計算時間:{(DateTime.Now - StartTime).TotalMilliseconds}ms";
+            }
+            catch(Exception Exception)
+            {
+                PrimeFactorizationResultTextBox.Text = "エラーが発生しました。値を確認してください。\n" + Exception;
+            }
+        }
+-->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>素因数分解</title>
+    <style>
+      @font-face 
+      {
+        font-family: DSEG7;
+        src: url("/font/DSEG7Classic-Bold.woff2");
+      }
+      .main
+      {
+        border: 1px solid rgb(0,0,0);
+        font-size: 20px;
+      }
+      .num
+      {
+        font-family: DSEG7;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        
+      <input class="num" id="rawNum" type="text" maxlength="12" placeholder="素因数分解する数"><br>
+      <input class="convertButton" type="button" value="↓計算" onclick="convert()"><br>
+      <input class="num" id="resultNum" type="text" maxlength="12" placeholder="素因数分解する数"><br>
+
+    </div>
+    <script>
+
+    </script>
+  </body>
+</html>
