@@ -154,6 +154,13 @@
       0% {right:-50%;}
       100% {right:250%;}
     }
+    .fName
+    {
+      font-size:14px;
+      padding-left: 4px;
+      border-left: 3px solid rgb(0, 0, 150);
+      background-color: rgb(180, 180, 180);
+    }
   </style>
   <script>
     window.onload = function() 
@@ -181,17 +188,21 @@
     <br>
     <div id="version" style="font-size:20px;"></div>
     <h1>Welcome!</h1>
+    Double-click "SimpleBrowser.exe" to start it.<br>
     This website is creating. I plan to complete it within 2023.
     <div class="news">
       <div class="news-in">
         <div class="news-header"> 
-          <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/03/29</span><br>
+          <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/04/22</span><br>
         </div>
         <div id="Infos" class="news-contents">
-          <span class="news-content">I will update SimpleBrowser in <span style="color: blue;">April 2023</span>. </span><br>
+          <span class="news-content">Updated SimpleBrowser in <span style="color: blue;">2023/04/22</span>. (Version:1.0.1)</span><br>
           Update points:<br>
-          1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
-          2. Add <span style="color: red;">"font change"</span>. This can fix the problem of display confusion.
+          1. Added <span style="color: red;">"bookmark"</span>(β). Save your favorite pages! Try pressing the ★ button!<br>
+          2. Added <span style="color: red;">"setting"</span>(β). There is a font setting, but the display may not change.<br>
+          3. Some processing adjustments were made. Please report any problems to the developer.<br>
+          <span class="news-content">Updated default page in <span style="color: blue;">2023/04/22</span>.</span><br>
+          Added <span style="color: red;">"file info"</span>. There is information on each file.
         </div>
       </div>
     </div>
@@ -203,6 +214,59 @@
     <a href="https://google.com">Google</a><br>
     <a href="https://www.youtube.com">YouTube</a><br>
     <a href="https://twitter.com">Twitter</a><br>
+    <h2>File info</h2>
+    Those in parentheses () are generated automatically.
+    <div class="fileInfo">
+      <p>
+        <span class="fName">runtimes\..</span><br>
+        <span class="fInfo">webview2 runtimes.</span>
+      </p>
+      <p>
+        <span class="fName">(SimpleBrowser.exe.WebView2\..)</span><br>
+        <span class="fInfo">cache, etc.</span>
+      </p>
+      <p>
+        <span class="fName">(Bookmark.csv)</span><br>
+        <span class="fInfo">bookmarks.</span>
+      </p>
+      <p>
+        <span class="fName">LICENSE</span><br>
+        <span class="fInfo">license.(MIT)</span>
+      </p>
+      <p>
+        <span class="fName">Microsoft.Web.WebView2.Core.dll</span><br>
+        <span class="fName">Microsoft.Web.WebView2.Core.xml</span><br>
+        <span class="fName">Microsoft.Web.WebView2.WinForms.dll</span><br>
+        <span class="fName">Microsoft.Web.WebView2.WinForms.xml</span><br>
+        <span class="fInfo">webview2 libraries and datas.</span>
+      </p>
+      <p>
+        <span class="fName">README.md</span><br>
+        <span class="fInfo">readme. Update information and more.</span>
+      </p>
+      <p>
+        <span class="fName">SimpleBrowser.exe</span><br>
+        <span class="fInfo">executable file. Double-click to start.</span>
+      </p>
+      <p>
+        <span class="fName">SimpleBrowser.exe.config</span><br>
+        <span class="fInfo">program setting, default setting data.</span>
+      </p>
+      <p>
+        <span class="fName">SimpleBrowser.pdb</span><br>
+        <span class="fInfo">program debug database. It is useful for error analysis.</span>
+      </p>
+      <p>
+        <span class="fName">(UserSetting.xml)</span><br>
+        <span class="fInfo">setting data.</span>
+      </p>
+      <!--ファイル名順にすること
+      <p>
+        <span class="fName"></span><br>
+        <span class="fInfo"></span>
+      </p>
+      -->
+    </div>
     <!------------main end------------>
     <script>//時計
       function Plus0(Num) 
@@ -220,7 +284,7 @@
         var NowTimeHour = Plus0(NowTime.getHours());
         var NowTimeMin  = Plus0(NowTime.getMinutes());
         var NowTimeSec  = Plus0(NowTime.getSeconds());
-        var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
+        var NowTimeString = NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
         document.getElementById("RealtimeClock").innerHTML = NowTimeString;
       }
       setInterval('ShowClock()',1000);
