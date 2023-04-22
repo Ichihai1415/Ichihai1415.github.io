@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <title>How to block ads in SimpleBrowser</title>
+  <style>
+    h1
+    {
+      padding-left: 10px;
+      border-left: 5px solid rgb(0, 0, 150);
+      border-bottom: 1px solid rgb(0, 150, 200);
+      background-color: rgb(220, 220, 220);
+    }
+    h2
+    {
+      padding-left: 8px;
+      border-left: 5px solid rgb(0, 150, 0);
+      border-bottom: 1px solid rgb(0, 200, 150);
+      background-color: rgb(220, 220, 220);
+    }
+    pre
+    {
+      background-color: rgb(60, 60, 60);
+      color: white;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>How to block ads in SimpleBrowser</h1>
+    <p>You can block ads by running javascript. No complicated knowledge is required, but with knowledge you can block many ads!</p>
+    <h2>Procedure</h2>
+    <p>1. Check your SimpleBrowser version. Must be version 1.0.2 or higher.</p>
+    <p>2. Create file "script.js" in the same location as "SimpleBrowser.exe".</p>
+    <p>3. Write code. If you are unsure, copy the code from <a href="#code">my example</a>, <a href="https://qiita.com/yamazaki3104/items/4073a4fd98cd7c4afe0d#%E3%81%9F%E3%81%A8%E3%81%88%E3%81%B0%E5%BA%83%E5%91%8A%E3%82%92%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF">here</a> or others.</p>
+    <p>4. Reload the page.</p>
+    All done! If there is one that is not blocked, let the developer know and I will give you the code.
+    <h2 id="code">Code example</h2>
+    <pre>
+      <code>
+        //delete google ads.
+        function adblock()
+        {
+          for (const div of document.querySelectorAll("div"))
+          {
+            if ("id" in div)
+              if (div.id.includes("google_ads_iframe_"))
+              {
+                div.id = "";
+                div.style = "text-align: center;";
+                div.innerHTML = "deleted google ads.";
+                console.log("deleted google ads");
+              }
+          }
+        }
+        setInterval("adblock()", 5000);
+      </code>
+    </pre>
+  </body>
+</html>
