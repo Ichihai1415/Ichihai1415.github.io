@@ -1,21 +1,18 @@
 使用ソフト一覧
-2023/01/30更新
+2023/05/13更新
 【簡易版(自作除く)】
 JQuake https://jquake.net/
 KyoshinEewViewer for ingen https://svs.ingen084.net/kyoshineewviewer/
 QWPASS https://qwpass.svdprev.info/
 Early-est http://early-est.rm.ingv.it/warning.html
-Clock For Fuku https://fuku1213.hatenablog.com/entry/2021/03/31/214957
-地牛Wake Up!(EEWを受信時のみ) https://eew.earthquake.tw/
 Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ) https://github.com/ExpTechTW/TREM
-緊急地震速報アラーム+ 応急版(EEW時のみ) http://wsparkle.s1008.xrea.com/programs/eewa2/
-Kiwi Monitor(EEW時のみ) https://kiwimonitor.amebaownd.com/ (配布終了)
 Moo0システムモニター https://jpn.moo0.com/software/SystemMonitor/
 TweetDeck(@UN_NERV) https://tweetdeck.twitter.com/
 KyoshinMonitorProxy https://github.com/ingen084/KyoshinMonitorProxy
 
 《使用中》
 【表示しているもの】
+
 JQuake
 https://jquake.net/
 
@@ -31,17 +28,8 @@ http://early-est.rm.ingv.it/warning.html
 Clock For Fuku
 https://fuku1213.hatenablog.com/entry/2021/03/31/214957
 
-地牛Wake Up!(EEWを受信時のみ)
-https://eew.earthquake.tw/
-
 Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ)
 https://github.com/ExpTechTW/TREM
-
-緊急地震速報アラーム+ 応急版(EEW時のみ)
-http://wsparkle.s1008.xrea.com/programs/eewa2/
-
-Kiwi Monitor(EEW時のみ)
-https://kiwimonitor.amebaownd.com/ (配布終了)
 
 Moo0システムモニター
 https://jpn.moo0.com/software/SystemMonitor/
@@ -52,7 +40,10 @@ https://tweetdeck.twitter.com/
 KyoshinMonitorProxy
 https://github.com/ingen084/KyoshinMonitorProxy
 
-【画面外(動作・SEなど)】
+リアルタイム地震ビューアー(TurboWarp Packagerでhtml出力し、webview2ソフトに埋め込んで表示)
+https://scratch.mit.edu/projects/636244032
+
+【画面外(SE・動作など)】
 
 P2P地震情報 新Windows版
 https://www.p2pquake.net/
@@ -63,17 +54,26 @@ http://chi.usamimi.info/Program/Application/BouyomiChan/
 The Last 10-Second
 http://weathernews.jp/quake/html/urgentquake.html
 
+地牛Wake Up!
+https://eew.earthquake.tw/
+
 OBS studio (設定→ 1280x720 30fps 2000Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
 https://obsproject.com
 
 FileKCC
 https://twitter.com/KuriharaCamera/status/1326509746359205888
 
+緊急地震速報アラーム+ 応急版
+http://wsparkle.s1008.xrea.com/programs/eewa2/
+
 Sendkeys
 http://cspace.s2.xrea.com/
 
 Quarog
 https://fuku1213.github.io/quarog-site/
+
+SignalNowX (予想震度3以上の場合)
+http://www.estrat.co.jp/signalnowx.html
 
 《自作ソフト》
 【表示しているもの】
@@ -96,16 +96,13 @@ Arduino_Quake_Intensity_Viewer(ソースコードのみ公開)(計測:GROVE I2C�
 https://github.com/Ichihai1415/Arduino_Quake_Intensity_Viewer
 
 
-[以前の動画で使用]
+《以前の動画で使用》
 
 EqWatch
 https://melanion.info/eqwatch/
 
 強震モニタ Extension
 http://kyomoniex.web.fc2.com
-
-FileKCC
-https://twitter.com/KuriharaCamera/status/1326509746359205888
 
 EarthquakeMap
 https://software.kichi2004.jp/tag/earthquakemap/
@@ -125,6 +122,9 @@ https://www.qim-quakeinfomonitor.com/ (リンク切れ)
 
 BR-N
 https://twitter.com/KuriharaCamera/status/1379819975116906501
+
+Kiwi Monitor
+https://kiwimonitor.amebaownd.com/ (配布終了)
 
 ティッカーくん
 https://rd.vector.co.jp/soft/winnt/net/se518506.html
@@ -152,9 +152,6 @@ https://www.p2pquake.net/eew_beta/
 
 P2P地震情報Monitor
 https://sites.google.com/site/p2pqmoni/home (リンク切れ)
-
-SignalNowX
-http://www.estrat.co.jp/signalnowx.html
 
 緊急地震速報 by Extension
 https://chrome.google.com/webstore/detail/%E7%B7%8A%E6%80%A5%E5%9C%B0%E9%9C%87%E9%80%9F%E5%A0%B1-by-extension/pebgngldogenhmnokpncolbajkelhjba
